@@ -1,0 +1,90 @@
+.MainWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.HomeTitle {
+  position: absolute;
+  place-items: center;
+  color: white;
+  font-size: 3.2em;
+  font-weight: 700;
+  padding: 1em;
+  z-index: 2;
+}
+
+.ImgWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 223px;
+  width: 100%;
+  border-radius: 35px;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+  }
+}
+
+.BgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 35px;
+  position: relative;
+  z-index: 0;
+
+}
+
+.CardsWrapper {
+  background-color: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2em;
+  border-radius: 35px;
+  margin-top: 4em;
+  place-items: center;
+  padding: 5em 3em;
+}
+
+@media (max-width: 1024px) {
+  .CardsWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .HomeTitle {
+    font-size: 1.5em;
+    padding: 1.5em;
+  }
+  .ImgWrapper {
+    height: 111px;
+    border-radius: 15px;
+  }
+  .BgImage {
+    border-radius: 15px;
+  }
+  .CardsWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .CardsWrapper {
+    grid-template-columns: 1fr;
+  }
+}
