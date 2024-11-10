@@ -1,0 +1,113 @@
+@use 'keyframes';
+
+li, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.CollapseIcon {
+  transition: transform 500ms ease-in-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+
+.Collapses {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8%;
+}
+
+.CollapseWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-height: 52px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .CollapseHeader {
+    display: flex;
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    color: white;
+    padding: 0 0.8em;
+    font-size: 1.125em;
+    font-weight: 700;
+    border-radius: 10px;
+    height: 52px;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .Content {
+    background-color: rgba(246, 246, 246, 0.45);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 0 0 10px 10px;
+    margin-top: -0.5em;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: -1;
+    position: relative;
+    transition: none;
+  }
+
+  .open {
+    animation: expand 500ms ease-in-out forwards;
+  }
+
+  .close {
+    animation: collapse 500ms ease-in-out forwards;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .Collapses {
+    gap: 1em;
+    flex-wrap: wrap;
+
+    .CollapseWrapper {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Collapses {
+    flex-direction: column;
+    gap: 0;
+  }
+  .CollapseWrapper {
+    margin-top: -1em;
+    .CollapseHeader {
+      border-radius: 5px;
+      height: 30px;
+      font-size: 0.813em;
+    }
+    .Content {
+      padding: 1.5em 2em;
+      font-size: 0.75em;
+      font-weight: 400;
+    }
+  }
+  .CollapseWrapper svg {
+    width: 24px;
+    height: 24px;
+  }
+}

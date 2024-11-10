@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 4em auto;
   max-width: 1440px;
 }
 
@@ -62,7 +62,8 @@
 
 @media (max-width: 1024px) {
   .CardsWrapper {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    padding: 2em;
   }
 }
 
@@ -78,13 +79,17 @@
   .BgImage {
     border-radius: 15px;
   }
-  .CardsWrapper {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
 }
 
 @media (max-width: 480px) {
   .CardsWrapper {
     grid-template-columns: 1fr;
+    margin-top: 2em;
+    padding: 0;
+    background-color: transparent;
+
+  }
+  .ImgWrapper{
+    margin-top: 0.5em;
   }
 }

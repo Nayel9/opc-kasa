@@ -1,0 +1,23 @@
+.FooterContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 210px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  gap: 1em;
+  margin: 0 -4em 0 -4em;
+}
+
+@media (max-width: 480px) {
+    .FooterContainer {
+        font-size: 14px;
+      span {
+        width: 135px;
+      }
+    }
+}

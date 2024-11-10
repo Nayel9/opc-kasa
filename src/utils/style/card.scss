@@ -1,9 +1,12 @@
+@use 'keyframes';
+
 .Card {
   border-radius: 15px;
   height: 340px;
   width: 340px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
 
 .CardCover {
@@ -14,18 +17,21 @@
 
 .CardTitle {
   position: absolute;
-  left: 10px;
+  left: 20px;
   bottom: 0;
   color: white;
-  font-size: 22px;
-  padding: 0 15px 0 15px;
+  font-size: 18px;
+  padding: 2px 15px 5px 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 90%;
   font-weight: 700;
   z-index: 2;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 15px;
-    padding: 0 15px 0 15px;
+  animation: slideIn 800ms ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .Card {
+    height: 255px;
+    width: 335px;
   }
 }

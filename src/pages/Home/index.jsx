@@ -1,7 +1,8 @@
 import BgImg from '../../assets/bgimg.jpg';
-import '../../utils/style/global.scss';
+import '../../utils/style/home.scss';
 import Card from '../../components/Card/index.jsx';
 import logements from '../../data/logements.json';
+
 
 function Home() {
   return (
@@ -11,8 +12,8 @@ function Home() {
         <img src={BgImg} alt="Background Image" className="BgImage" />
       </div>
       <div className="CardsWrapper">
-        {logements.map(({ title, cover }) => (
-          <Card key={title} title={title} cover={cover} />
+        {logements.map(({ id, title, cover }) => (
+          <Card key={id} id={id} title={title} cover={cover} />
         ))}
       </div>
     </div>

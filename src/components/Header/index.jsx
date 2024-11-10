@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import pinkLogo from '../../assets/pinklogo.png';
-import '../../utils/style/global.scss';
+import '../../utils/style/header.scss';
 
 function Header() {
   return (

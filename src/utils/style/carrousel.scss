@@ -1,0 +1,74 @@
+.Carrousel {
+  position: relative;
+  max-width: 1440px;
+  height: 482px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.CarrouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 25px;
+}
+
+.CarrouselIndex {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  font-size: 2em;
+
+}
+
+.CarrouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 10px 8px 10px;
+  cursor: pointer;
+}
+
+.CarrouselButton:first-of-type {
+  left: 0;
+  border-radius: 0 15px 15px 0;
+}
+
+.CarrouselButton:last-of-type {
+  right: 0;
+  border-radius: 15px 0 0 15px;
+}
+
+@media (max-width: 768px) {
+  .CarrouselButton svg {
+    width: 48px;
+    height: 48px;
+  }
+  .CarrouselIndex {
+    left: 45%;
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 480px) {
+  .Carrousel {
+    height: 225px;
+  }
+  .CarrouselIndex {
+    left: 45%;
+    font-size: 0.825em;
+  }
+  .CarrouselButton svg {
+    width: 32px;
+    height: 32px;
+  }
+}

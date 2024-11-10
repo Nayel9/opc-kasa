@@ -1,0 +1,132 @@
+.PageLogement {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.LogementDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.HeaderDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.TitlesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.TitlesWrapper span {
+  margin-top: 1em;
+}
+
+.TitlesWrapper h1 {
+  font-size: 2.25em;
+  font-weight: 500;
+  color: #ff6060;
+  margin: 0;
+}
+
+.TitlesWrapper h2 {
+  font-size: 1.125em;
+  font-weight: 500;
+  margin: 0 0 0.5em 0;
+}
+
+.Host {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.HostName {
+  font-size: 1.125em;
+  font-weight: 500;
+  color: #ff6060;
+  display: inline-block;
+  white-space: pre-wrap;
+}
+
+.HostName::before {
+  content: attr(data-name);
+  white-space: pre-wrap;
+  display: block;
+}
+
+.HostPicture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.HostRating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3em;
+}
+
+.HostRating .Rating {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .LogementDetails {
+    margin-top: 1em;
+  }
+
+  .TitlesWrapper h1 {
+    font-size: 1.125em;
+    min-width: 100%;
+  }
+
+  .TitlesWrapper h2 {
+    font-size: 0.875em;
+  }
+
+  .TitlesWrapper span {
+    margin-top: 0.5em;
+  }
+
+  .HeaderDetails {
+    gap: 1.2em;
+  }
+
+  .HostName {
+    font-size: 0.75em;
+  }
+
+  .HostPicture {
+    width: 32px;
+    height: 32px;
+  }
+  .Collapses {
+    gap: 1em;
+  }
+}
+  @media (max-width: 480px) {
+  .Collapses {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+    .HeaderDetails {
+      flex-direction: column;
+      margin-bottom: 2em;
+    }
+
+    .HostRating {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+}
+
