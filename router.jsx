@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="Kasa-opc/" element={<Home />} />
         <Route path="Kasa-opc/logement/:id" element={<Logement />} />
         <Route path="Kasa-opc/propos" element={<Propos />} />
-        <Route path="*" element={<Error />} />
+        <Route path="Kasa-opc/*" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>
