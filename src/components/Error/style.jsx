@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+//****** CSS in JS ERROR STYLE ******//
+
 export const StyledDiv = styled.div`
       display: flex;
       flex-direction: column;

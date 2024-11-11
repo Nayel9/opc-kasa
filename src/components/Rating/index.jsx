@@ -2,6 +2,7 @@ import propTypes from 'prop-types';
 import styled from 'styled-components';
 import { FaStar } from 'react-icons/fa6';
 
+//********* CSS IN JS STYLE *********//
 
 const PinkRatingStars = styled.span`
   color: #ff6060;

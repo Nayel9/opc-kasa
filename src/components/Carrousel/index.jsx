@@ -14,7 +14,7 @@ function Carrousel({ id }) {
   }
 
   const nextSlide = () => {
-    setCurrentImage((prevImage) => (prevImage + 1) % logement.pictures.length);
+    setCurrentImage((prevImage) => (prevImage + 1) % logement.pictures.length); //modulo to loop
   };
 
   const prevSlide = () => {
@@ -24,7 +24,7 @@ function Carrousel({ id }) {
   return (
     <div className="Carrousel">
       <button onClick={prevSlide} className="CarrouselButton"><FaAngleLeft size={96}/></button>
-      <img src={logement.pictures[currentImage]} alt={`Slide ${currentImage}`} className="CarrouselImage"/>
+      <img src={logement.pictures[currentImage]} alt={`Slide ${currentImage}`} className="CarrouselImage" loading="lazy" rel="preload"/>
       <div className="CarrouselIndex">{currentImage + 1}/{logement.pictures.length}</div>
       <button onClick={nextSlide} className="CarrouselButton"><FaAngleRight size={96} /></button>
     </div>

@@ -1,6 +1,8 @@
 import propTypes from 'prop-types';
 import styled from 'styled-components';
 
+// ****** CSS IN JS STYLES ****** //
+
 const TagsWrapper = styled.div`
     display: flex;
     flex-direction: row;

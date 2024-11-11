@@ -5,7 +5,7 @@ import '../../utils/style/propos.scss';
 function Propos() {
   return (
     <div className="ProposWrapper">
-      <img className="HeadImg" src={HeadImg} alt="head" />
+      <img className="HeadImg" src={HeadImg} alt="head" loading="lazy" rel="preload" />
       <div className="ProposCollapseWrapper">
         <Collapse title="Fiabilité">
           <p>Les annonces postées sur Kasa garantissent une

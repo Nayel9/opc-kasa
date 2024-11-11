@@ -7,7 +7,7 @@ function Card({ id, title = '', cover = 'DefaultPicture' }) {
   return (
     <div className="Card">
       <Link to = {`/logement/${id}`}>
-      <img src={cover} alt="cover" className="CardCover" />
+      <img src={cover} alt="cover" className="CardCover" loading="lazy" rel="preload"/>
       <h2 className="CardTitle">{title}</h2>
       </Link>
     </div>
