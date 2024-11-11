@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Nayel9.github.io/Kasa-opc",
+  "homepage": "https://Nayel9.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "pnpm build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "pnpm --workspace gh-pages -d dist"
   },
   "dependencies": {
     "components": "^0.1.0",
