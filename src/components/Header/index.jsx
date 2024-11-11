@@ -8,8 +8,8 @@ function Header() {
       <div className="BannerHeader">
         <img src={pinkLogo} alt="logo" className="pinkLogo"/>
         <nav className="NavBar">
-          <Link to="Kasa-opc/">Accueil</Link>
-          <Link to="Kasa-opc/propos">À propos</Link>
+          <Link to="/">Accueil</Link>
+          <Link to="/propos">À propos</Link>
         </nav>
       </div>
     </header>

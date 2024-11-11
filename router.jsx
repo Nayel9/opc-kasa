@@ -11,13 +11,14 @@ import Propos from './src/pages/Propos/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter basename="/Kasa-opc" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Header />
       <Routes>
-        <Route path="Kasa-opc/" element={<Home />} />
-        <Route path="Kasa-opc/logement/:id" element={<Logement />} />
-        <Route path="Kasa-opc/propos" element={<Propos />} />
-        <Route path="Kasa-opc/*" element={<Error />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/logement/*" element={<Error />} />
+        <Route path="/propos" element={<Propos />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

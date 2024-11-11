@@ -5,15 +5,17 @@ import '../../utils/style/logement.scss';
 import Tags from '../../components/Tags';
 import Rating from '../../components/Rating';
 import Collapse from '../../components/Collapse';
+import Error from '../../components/Error';
 
 function Logement() {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
-  const [firstName, lastName] = logement.host.name.split(' ');
 
   if (!logement) {
-    return <div>Logement non trouvé</div>;
+    return <Error />;
   }
+
+  const [firstName, lastName] = logement.host.name.split(' ');
 
   return (
     <div className="PageLogement">
