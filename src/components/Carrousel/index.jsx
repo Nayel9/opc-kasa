@@ -42,11 +42,15 @@ function Carrousel({ id }) {
     return <div>Photos non disponibles</div>;
   }
 
+  const showNavigation = logement.pictures.length > 1;
+
   return (
     <div className="Carrousel">
-      <button onClick={prevSlide} className="CarrouselButton">
-        <FaAngleLeft size={96} />
-      </button>
+      {showNavigation && (
+        <button onClick={prevSlide} className="CarrouselButton">
+          <FaAngleLeft size={96} />
+        </button>
+      )}
       <img
         src={logement.pictures[currentImage]}
         alt={`Slide ${currentImage}`}
@@ -57,9 +61,11 @@ function Carrousel({ id }) {
       <div className="CarrouselIndex">
         {currentImage + 1}/{logement.pictures.length}
       </div>
-      <button onClick={nextSlide} className="CarrouselButton">
-        <FaAngleRight size={96} />
-      </button>
+      {showNavigation && (
+        <button onClick={nextSlide} className="CarrouselButton">
+          <FaAngleRight size={96} />
+        </button>
+      )}
     </div>
   );
 }
