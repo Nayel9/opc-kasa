@@ -1,6 +1,7 @@
-/*Global Css*/
 
-a {
+/*Reset Css*/
+
+body a {
   color: #000000;
   text-decoration: none;
 }
