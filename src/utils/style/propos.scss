@@ -1,0 +1,43 @@
+.ProposWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto 0 auto;
+  max-width: 1440px;
+  gap: 2.5em;
+}
+
+.HeadImg {
+  width: 100%;
+  height: 223px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.ProposCollapseWrapper {
+  width: 90%;
+  margin: 0 auto 1em auto;
+
+  .CollapseWrapper {
+    margin-bottom: -1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .ProposWrapper {
+    margin-top: 1em;
+    gap: 3em;
+  }
+  .HeadImg {
+    height: 112px;
+  }
+  .ProposCollapseWrapper {
+    width: 100%;
+    margin: 0 auto 0 auto;
+
+    .CollapseWrapper {
+      margin-bottom: 0.5em;
+    }
+  }
+
+}

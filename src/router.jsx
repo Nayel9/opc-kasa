@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import Logement from './pages/Logement';
 import Error from './components/Error';
+import Propos from './pages/Propos/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/logement/:id" element={<Logement />} />
+        <Route path="/propos" element={<Propos />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
