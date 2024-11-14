@@ -1,18 +1,17 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import logements from '../../data/logements.json';
 import Carrousel from '../../components/Carrousel';
 import '../../utils/style/logement.scss';
 import Tags from '../../components/Tags';
 import Rating from '../../components/Rating';
 import Collapse from '../../components/Collapse';
-import Error from '../../components/Error';
 
 function Logement() {
   const { id } = useParams();
   const logement = logements.find((logement) => logement.id === id);
 
   if (!logement) {
-    return <Error />;
+    return <Navigate to="../../components/Error" replace />;
   }
 
   const [firstName, lastName] = logement.host.name.split(' ');
