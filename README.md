@@ -50,7 +50,7 @@ Pour démarrer l'application en mode développement, exécutez :
 pnpm start
 ```
 
-L'application sera accessible à l'adresse http://localhost:3000.  
+L'application sera accessible à l'adresse http://localhost:5173/Kasa-opc/.  
 
 Pour créer une version de production de l'application, exécutez :
 ```bash
