@@ -1,7 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom';
 import logements from '../../data/logements.json';
 import Carrousel from '../../components/Carrousel';
-import '../../utils/style/logement.scss';
+import './logement.scss';
 import Tags from '../../components/Tags';
 import Rating from '../../components/Rating';
 import Collapse from '../../components/Collapse';

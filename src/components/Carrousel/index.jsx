@@ -1,6 +1,6 @@
 import logements from '../../data/logements.json';
 import { useEffect, useState, useCallback } from 'react';
-import '../../utils/style/carrousel.scss';
+import './carrousel.scss';
 import { FaAngleLeft } from 'react-icons/fa6';
 import { FaAngleRight } from 'react-icons/fa6';
 import PropTypes from 'prop-types';

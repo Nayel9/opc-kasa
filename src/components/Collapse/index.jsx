@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import '../../utils/style/collapse.scss';
+import './collapse.scss';
 import { FaAngleUp } from 'react-icons/fa6';
 import { useState, useRef } from 'react';
 

@@ -1,5 +1,5 @@
 import BgImg from '../../assets/bgimg.jpg';
-import '../../utils/style/home.scss';
+import './home.scss';
 import Card from '../../components/Card/index.jsx';
 import logements from '../../data/logements.json';
 

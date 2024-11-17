@@ -1,6 +1,6 @@
 import HeadImg from '../../assets/head.jpg';
 import Collapse from '../../components/Collapse';
-import '../../utils/style/propos.scss';
+import './propos.scss';
 
 function Propos() {
   return (

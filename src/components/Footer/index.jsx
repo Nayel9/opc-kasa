@@ -1,5 +1,5 @@
 import whiteLogo from '../../assets/whitelogo.png';
-import '../../utils/style/footer.scss';
+import './footer.scss';
 
 function Footer() {
   return (

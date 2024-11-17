@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../../utils/style/card.scss';
+import './card.scss';
 
 
 function Card({ id, title = '', cover = 'DefaultPicture' }) {
