@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "pnpm build",
-    "deploy": "pnpm --workspace gh-pages -d dist"
+    "deploy": "pnpm gh-pages -d dist"
   },
   "dependencies": {
     "components": "^0.1.0",
